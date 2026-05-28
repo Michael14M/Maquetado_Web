@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.recibo-container {
+    width: 850px;
+    background-color: #ffffff;
+    border: 2px solid #205c83;
+    border-radius: 4px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* Base de color y peso de fuentes heredados para evitar repeticiones */
+.services-grid, .phones, .recibo-label, .input-row, .date-box, .main-table th, .observaciones-label, .total-label, .total-value, .signature-block {
+    color: #205c83;
+    font-weight: bold;
+}
+
+/* Flexbox base compartido */
+.header, .service-item, .header-right, .input-row, .date-cells, .total-box, .total-label, .total-value, .signatures-section {
+    display: flex;
+}
+
+.header { justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
+.logo-area { max-width: 60%; }
+
+.logo-title, .logo-subtitle { font-family: 'Oswald', sans-serif; font-weight: bold; }
+.logo-title { font-size: 28px; letter-spacing: 1px; }
+.logo-green { color: #519845; }
+.logo-and { color: #205c83; font-size: 22px; }
+.logo-blue { color: #205c83; }
+
+.logo-subtitle { font-size: 22px; color: #519845; letter-spacing: 3px; margin-top: -5px; text-transform: lowercase; }
+.logo-slogan { font-size: 9px; color: #205c83; font-style: italic; margin-top: 2px; }
+
+.services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; font-size: 11px; margin-top: 5px; }
+.service-item { align-items: center; gap: 5px; }
+.checkbox-custom { width: 12px; height: 12px; border: 1px solid #205c83; display: inline-block; }
+
+.header-right { text-align: right; flex-direction: column; align-items: flex-end; gap: 10px; }
+.phones { font-size: 11px; }
+.recibo-box { border: 1.5px solid #205c83; border-radius: 8px; padding: 5px 15px; text-align: center; min-width: 140px; }
+.recibo-label { font-size: 12px; letter-spacing: 2px; }
+.recibo-number { font-size: 18px; color: #bd3232; font-family: monospace; margin-top: 2px; }
+
+.info-section, .footer-table-area { display: grid; gap: 20px; }
+.info-section { grid-template-columns: 2fr 1fr; margin-bottom: 15px; }
+
+.input-row { align-items: flex-end; margin-bottom: 10px; font-size: 12px; }
+.input-row span { white-space: nowrap; margin-right: 5px; }
+.line-fill { flex-grow: 1; border-bottom: 1px solid #205c83; height: 15px; }
+
+.dates-container { display: flex; gap: 15px; justify-content: flex-end; }
+.date-box { text-align: center; font-size: 10px; }
+.date-cells { margin-top: 4px; }
+.date-cell { width: 25px; height: 22px; border: 1px solid #205c83; border-right: none; }
+.dates-cells .date-cell:last-child { border-right: 1px solid #205c83; }
+
+.physical-data { display: flex; gap: 15px; margin-bottom: 20px; }
+
+.main-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+.main-table th, .main-table td { border: 1px solid #205c83; }
+.main-table th { padding: 6px; font-size: 13px; letter-spacing: 1px; }
+.main-table td { height: 220px; vertical-align: top; padding: 10px; }
+.col-desc { width: 75%; }
+.col-val { width: 25%; }
+
+.footer-table-area { grid-template-columns: 2.3fr 1fr; align-items: start; }
+.observaciones-box { border: 1px solid #205c83; height: 90px; position: relative; padding: 8px; }
+.observaciones-label { font-size: 11px; }
+
+.total-box { border: 1px solid #205c83; height: 40px; align-items: stretch; }
+.total-label { justify-content: center; width: 40%; border-right: 1px solid #205c83; font-size: 13px; letter-spacing: 1px; }
+.total-value { width: 60%; padding-left: 10px; font-size: 14px; align-items: center; }
+
+.signatures-section { justify-content: space-between; margin-top: 50px; padding: 0 20px; }
+.signature-block { width: 250px; text-align: center; border-top: 1px solid #205c83; padding-top: 5px; font-size: 10px; letter-spacing: 1px; }

@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.recibo-container {
+    width: 850px;
+    background-color: #ffffff;
+    border: 2px solid #205c83;
+    border-radius: 4px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Agrupación de contenedores Flexbox principales */
+.header, .info-section, .footer-table-area, .signatures-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header { margin-bottom: 20px; }
+.logo-area { max-width: 60%; }
+
+.logo-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.logo-green { color: #519845; }
+.logo-and { color: #205c83; font-size: 22px; }
+.logo-blue { color: #205c83; }
+
+.logo-subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    color: #519845;
+    letter-spacing: 3px;
+    margin-top: -5px;
+    text-transform: lowercase;
+}
+
+.logo-slogan {
+    font-size: 9px;
+    color: #205c83;
+    font-style: italic;
+    margin-top: 2px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    font-size: 11px;
+    color: #205c83;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.checkbox-custom {
+    width: 12px;
+    height: 12px;
+    border: 1px solid #205c83;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.phones {
+    font-size: 11px;
+    color: #205c83;
+    font-weight: bold;
+}
+
+.recibo-box {
+    border: 1.5px solid #205c83;
+    border-radius: 8px;
+    padding: 5px 15px;
+    text-align: center;
+    min-width: 140px;
+}
+
+.recibo-label {
+    font-size: 12px;
+    color: #205c83;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.recibo-number {
+    font-size: 18px;
+    color: #bd3232;
+    font-weight: bold;
+    font-family: monospace;
+    margin-top: 2px;
+}
+
+.info-section {
+    margin-bottom: 15px;
+    align-items: start;
+}
+
+.info-section > div:first-child { width: 65%; }
+
+.input-row {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #205c83;
+    font-weight: bold;
+}
+
+.input-row span { white-space: nowrap; margin-right: 5px; }
+
+.line-fill {
+    flex-grow: 1;
+    border-bottom: 1px solid #205c83;
+    height: 15px;
+}
+
+.dates-container { display: flex; gap: 15px; }
+.date-box { text-align: center; font-size: 10px; color: #205c83; font-weight: bold; }
+.date-cells { display: flex; margin-top: 4px; }
+
+.date-cell {
+    width: 25px;
+    height: 22px;
+    border: 1px solid #205c83;
+    border-right: none;
+}
+.date-cells .date-cell:last-child { border-right: 1px solid #205c83; }
+
+.physical-data { display: flex; gap: 15px; margin-bottom: 20px; }
+
+.main-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.main-table th, .main-table td { border: 1px solid #205c83; }
+
+.main-table th {
+    color: #205c83;
+    padding: 6px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.main-table td { height: 220px; }
+.col-desc { width: 75%; }
+.col-val { width: 25%; }
+
+.footer-table-area { align-items: start; }
+
+.observaciones-box {
+    border: 1px solid #205c83;
+    height: 90px;
+    padding: 8px;
+    width: 70%;
+}
+
+.observaciones-label { font-size: 11px; color: #205c83; font-weight: bold; }
+
+.total-container { width: 25%; }
+
+.total-box {
+    display: flex;
+    border: 1px solid #205c83;
+    height: 40px;
+}
+
+.total-label, .total-value {
+    display: flex;
+    align-items: center;
+    color: #205c83;
+    font-weight: bold;
+}
+
+.total-label {
+    justify-content: center;
+    width: 40%;
+    border-right: 1px solid #205c83;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.total-value { width: 60%; padding-left: 10px; font-size: 14px; }
+
+.signatures-section { margin-top: 50px; padding: 0 20px; }
+
+.signature-block {
+    width: 250px;
+    text-align: center;
+    border-top: 1px solid #205c83;
+    padding-top: 5px;
+    font-size: 10px;
+    color: #205c83;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
