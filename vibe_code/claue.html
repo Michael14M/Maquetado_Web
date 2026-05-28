@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recibo Green & Blue Aquamarine</title>
+  <link rel="stylesheet" href="recibo.css" />
+</head>
+<body>
+
+  <div class="recibo">
+
+    <!-- ── HEADER ── -->
+    <div class="header">
+      <div class="logo-block">
+        <div class="logo-title">
+          <span class="logo-green">GREEN</span>
+          <span class="logo-ampersand"> &</span>
+          <span class="logo-blue"> BLUE</span>
+        </div>
+        <div class="logo-subtitle">a q u a m a r i n e</div>
+        <div class="logo-tagline">Bienestar y prevención en la funcionalidad física</div>
+      </div>
+
+      <div class="header-right">
+        <div class="servicios">
+          <div class="servicio-item">
+            <input type="checkbox" /> REHABILITACIÓN
+          </div>
+          <div class="servicio-item">
+            <input type="checkbox" /> ENTRENAMIENTO
+          </div>
+          <div class="servicio-item">
+            <input type="checkbox" /> MASAJES
+          </div>
+          <div class="servicio-item">
+            <input type="checkbox" /> NATACIÓN
+          </div>
+        </div>
+        <div class="contacto">
+          <span>☎</span> 318 868 8008 / 310 740 6038
+        </div>
+      </div>
+    </div>
+
+    <!-- ── RECIBO NUMBER + FECHAS ── -->
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+
+      <div class="fechas-row" style="flex-direction:column; gap:6px;">
+        <div class="fecha-group">
+          <label>Fecha Inicio</label>
+          <div class="fecha-boxes">
+            <div class="fecha-box"></div>
+            <div class="fecha-box"></div>
+            <div class="fecha-box"></div>
+          </div>
+        </div>
+        <div class="fecha-group">
+          <label>Fecha Finalización</label>
+          <div class="fecha-boxes">
+            <div class="fecha-box"></div>
+            <div class="fecha-box"></div>
+            <div class="fecha-box"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="recibo-num-row" style="flex-direction:column; align-items:flex-end;">
+        <div class="recibo-label">RECIBO</div>
+        <div style="display:flex; align-items:center; gap:6px; margin-top:4px;">
+          <span style="font-weight:bold; color:#333;">N°</span>
+          <div class="recibo-num-box">0458</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SEÑOR(ES) ── -->
+    <div class="senor-row">
+      <label>Señor (es):</label>
+      <input type="text" class="line-input" />
+    </div>
+
+    <!-- ── TELÉFONO / CIUDAD ── -->
+    <div class="tel-ciudad-row">
+      <div class="field-group">
+        <label>Teléfono:</label>
+        <input type="text" class="line-input" />
+      </div>
+      <div class="field-group">
+        <label>Ciudad:</label>
+        <input type="text" class="line-input" />
+      </div>
+    </div>
+
+    <!-- ── DIRECCIÓN ── -->
+    <div class="dir-row">
+      <label>Dirección:</label>
+      <input type="text" class="line-input" />
+    </div>
+
+    <!-- ── EDAD / PESO / TALLA ── -->
+    <div class="stats-row">
+      <div class="field-group">
+        <label>Edad:</label>
+        <input type="text" class="line-input" />
+      </div>
+      <div class="field-group">
+        <label>Peso:</label>
+        <input type="text" class="line-input" />
+      </div>
+      <div class="field-group">
+        <label>Talla:</label>
+        <input type="text" class="line-input" />
+      </div>
+    </div>
+
+    <!-- ── DESCRIPCIÓN TABLE ── -->
+    <div class="descripcion-label">DESCRIPCIÓN</div>
+    <table class="desc-table">
+      <thead>
+        <tr>
+          <th class="col-descripcion">Descripción</th>
+          <th class="col-ppl">PPL.</th>
+          <th class="col-vrtotal">VR. TOTAL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+
+    <!-- ── TOTAL ── -->
+    <div class="total-row">
+      <div class="total-label">TOTAL</div>
+      <div class="total-currency">$</div>
+      <div class="total-amount"></div>
+    </div>
+
+    <!-- ── OBSERVACIONES ── -->
+    <div class="obs-label">OBSERVACIONES</div>
+    <div class="obs-box"></div>
+
+    <!-- ── FIRMAS ── -->
+    <div class="firmas-row">
+      <div class="firma-block">
+        <div class="firma-line"></div>
+        <div class="firma-label">FIRMA DEL INSTRUCTOR</div>
+      </div>
+      <div class="firma-block">
+        <div class="firma-line"></div>
+        <div class="firma-label">FIRMA DEL USUARIO</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

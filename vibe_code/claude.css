@@ -1,0 +1,366 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+}
+
+.recibo {
+  background: #dff0f5;
+  border: 2px solid #4a9fc4;
+  width: 380px;
+  padding: 12px;
+  position: relative;
+}
+
+/* ── HEADER ── */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.logo-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.logo-green {
+  color: #2e7d32;
+}
+
+.logo-ampersand {
+  color: #1565c0;
+  font-size: 26px;
+}
+
+.logo-blue {
+  color: #1565c0;
+}
+
+.logo-subtitle {
+  font-size: 10px;
+  color: #2e7d32;
+  font-style: italic;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+.logo-tagline {
+  font-size: 7.5px;
+  color: #555;
+  margin-top: 3px;
+  max-width: 140px;
+}
+
+.header-right {
+  text-align: right;
+}
+
+.servicios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  justify-content: flex-end;
+  margin-bottom: 6px;
+}
+
+.servicio-item {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 9px;
+  color: #1565c0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.servicio-item input[type="checkbox"] {
+  width: 11px;
+  height: 11px;
+  accent-color: #1565c0;
+}
+
+.contacto {
+  font-size: 8.5px;
+  color: #333;
+  margin-top: 4px;
+}
+
+.contacto span {
+  color: #1565c0;
+}
+
+/* ── RECIBO NUMBER ── */
+.recibo-num-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.recibo-label {
+  font-size: 11px;
+  font-weight: bold;
+  color: #1565c0;
+  border: 1px solid #4a9fc4;
+  padding: 2px 8px;
+}
+
+.recibo-num-box {
+  border: 1px solid #4a9fc4;
+  padding: 3px 10px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+  min-width: 60px;
+  text-align: center;
+}
+
+/* ── FECHAS ── */
+.fechas-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.fecha-group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.fecha-group label {
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap;
+}
+
+.fecha-boxes {
+  display: flex;
+  gap: 3px;
+}
+
+.fecha-box {
+  width: 22px;
+  height: 22px;
+  border: 1px solid #4a9fc4;
+  background: white;
+}
+
+/* ── SEÑOR ROW ── */
+.senor-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-bottom: 1px solid #4a9fc4;
+  padding-bottom: 4px;
+  margin-bottom: 5px;
+}
+
+.senor-row label {
+  font-weight: bold;
+  white-space: nowrap;
+  color: #333;
+}
+
+.senor-row .line-input {
+  flex: 1;
+  border: none;
+  border-bottom: 1px solid #4a9fc4;
+  background: transparent;
+  height: 16px;
+  outline: none;
+}
+
+/* ── TELEFONO / CIUDAD ── */
+.tel-ciudad-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.field-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.field-group label {
+  font-weight: bold;
+  white-space: nowrap;
+  color: #333;
+}
+
+.field-group .line-input {
+  flex: 1;
+  border: none;
+  border-bottom: 1px solid #4a9fc4;
+  background: transparent;
+  height: 16px;
+  outline: none;
+}
+
+/* ── DIRECCION ── */
+.dir-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.dir-row label {
+  font-weight: bold;
+  white-space: nowrap;
+  color: #333;
+}
+
+.dir-row .line-input {
+  flex: 1;
+  border: none;
+  border-bottom: 1px solid #4a9fc4;
+  background: transparent;
+  height: 16px;
+  outline: none;
+}
+
+/* ── EDAD / PESO / TALLA ── */
+.stats-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+/* ── DESCRIPCION TABLE ── */
+.descripcion-label {
+  font-weight: bold;
+  text-align: center;
+  background: transparent;
+  border: 1px solid #4a9fc4;
+  border-bottom: none;
+  padding: 3px;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.desc-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 6px;
+}
+
+.desc-table th,
+.desc-table td {
+  border: 1px solid #4a9fc4;
+  padding: 4px 6px;
+  text-align: left;
+  height: 22px;
+}
+
+.desc-table th {
+  font-weight: bold;
+  font-size: 10px;
+  color: #333;
+  background: transparent;
+  text-align: center;
+}
+
+.desc-table tbody tr {
+  height: 20px;
+}
+
+.col-descripcion { width: 55%; }
+.col-ppl         { width: 20%; }
+.col-vrtotal     { width: 25%; }
+
+/* ── TOTAL ROW ── */
+.total-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 10px;
+}
+
+.total-label {
+  border: 1px solid #4a9fc4;
+  padding: 4px 12px;
+  font-weight: bold;
+  color: #333;
+}
+
+.total-currency {
+  border: 1px solid #4a9fc4;
+  border-left: none;
+  padding: 4px 8px;
+  min-width: 20px;
+  color: #333;
+}
+
+.total-amount {
+  border: 1px solid #4a9fc4;
+  border-left: none;
+  padding: 4px 30px;
+  min-width: 80px;
+}
+
+/* ── OBSERVACIONES ── */
+.obs-label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 3px;
+  letter-spacing: 1px;
+}
+
+.obs-box {
+  border: 1px solid #4a9fc4;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+/* ── FIRMAS ── */
+.firmas-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.firma-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+}
+
+.firma-line {
+  border-top: 1px solid #333;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.firma-label {
+  font-size: 9.5px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  letter-spacing: 0.5px;
+}
