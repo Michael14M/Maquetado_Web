@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.recibo-container {
+    width: 850px;
+    background-color: #bcebe3; /* El color aquamarina original */
+    border: 2px solid #205c83;
+    border-radius: 4px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* Base de color y peso de fuentes heredados */
+.services-grid, .phones, .recibo-label, .input-row, .date-box, .main-table th, .observaciones-label, .total-label, .total-value, .texto-firma {
+    color: #205c83;
+    font-weight: bold;
+}
+
+.header, .service-item, .header-right, .input-row, .date-cells, .total-box, .total-label, .total-value, .signatures-section {
+    display: flex;
+}
+
+.header { justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
+.logo-area { max-width: 60%; }
+
+.logo-title, .logo-subtitle { font-family: 'Oswald', sans-serif; font-weight: bold; }
+.logo-title { font-size: 28px; letter-spacing: 1px; }
+.logo-green { color: #519845; }
+.logo-and { color: #205c83; font-size: 22px; }
+.logo-blue { color: #205c83; }
+
+.logo-subtitle { font-size: 22px; color: #519845; letter-spacing: 3px; margin-top: -5px; text-transform: lowercase; }
+.logo-slogan { font-size: 9px; color: #205c83; font-style: italic; margin-top: 2px; }
+
+.services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; font-size: 11px; margin-top: 5px; }
+.service-item { align-items: center; gap: 5px; cursor: pointer; }
+
+/* Checkboxes interactivos limpios */
+.checkbox-interactivo {
+    width: 13px;
+    height: 13px;
+    accent-color: #205c83;
+    cursor: pointer;
+}
+
+.header-right { text-align: right; flex-direction: column; align-items: flex-end; gap: 10px; }
+.phones { font-size: 11px; }
+.recibo-box { border: 1.5px solid #205c83; border-radius: 8px; padding: 5px 15px; text-align: center; min-width: 140px; }
+.recibo-label { font-size: 12px; letter-spacing: 2px; }
+.recibo-number { font-size: 18px; color: #bd3232; font-family: monospace; margin-top: 2px; }
+
+.input-no {
+    width: 50px;
+    background: transparent;
+    border: none;
+    color: #bd3232;
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+}
+
+.info-section, .footer-table-area { display: grid; gap: 20px; }
+.info-section { grid-template-columns: 2fr 1fr; margin-bottom: 15px; }
+
+.input-row { align-items: flex-end; margin-bottom: 10px; font-size: 12px; position: relative; }
+.input-row span { white-space: nowrap; margin-right: 5px; }
+.line-fill { flex-grow: 1; border-bottom: 1px solid #205c83; height: 15px; display: flex; align-items: flex-end; }
+
+/* Inputs planos sobre las líneas continuas de datos */
+.input-editable {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 13px;
+    color: #000;
+    padding-left: 5px;
+    padding-bottom: 1px;
+}
+
+.dates-container { display: flex; gap: 15px; justify-content: flex-end; }
+.date-box { text-align: center; font-size: 10px; }
+
+/* CORRECCIÓN: Estructura de celdas para la fecha sin recuadros grises */
+.date-cells { margin-top: 4px; display: flex; }
+
+.date-cell-input {
+    width: 26px;
+    height: 22px;
+    border: 1px solid #205c83;
+    border-right: none;
+    background: transparent;
+    text-align: center;
+    font-family: inherit;
+    font-size: 11px;
+    color: #000;
+    outline: none;
+}
+
+/* Ajuste específico para la celda del año (que requiere 4 dígitos) */
+.date-cells .date-cell-input:nth-child(3) {
+    width: 38px;
+}
+
+.date-cells .date-cell-input:last-child {
+    border-right: 1px solid #205c83;
+}
+
+/* Modificación visual de placeholders de fecha para que sean sutiles */
+.date-cell-input::placeholder {
+    color: rgba(32, 92, 131, 0.4);
+    font-size: 9px;
+}
+
+.physical-data { display: flex; gap: 15px; margin-bottom: 20px; }
+.flex-2 { flex: 2; }
+.flex-1 { flex: 1; }
+
+/* Configuración de Tabla Principal */
+.main-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+.main-table th, .main-table td { border: 1px solid #205c83; }
+.main-table th { padding: 6px; font-size: 13px; letter-spacing: 1px; }
+.main-table td { height: 220px; vertical-align: top; padding: 0; }
+.col-desc { width: 75%; }
+.col-val { width: 25%; }
+
+/* Área de descripción sin cajón gris */
+.textarea-tabla {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    resize: none;
+    padding: 12px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    color: #000;
+}
+
+.valor-container-cell {
+    display: flex;
+    align-items: center;
+    padding: 12px 10px;
+    font-size: 15px;
+    color: #205c83;
+    font-weight: bold;
+    width: 100%;
+}
+
+.input-tabla-valor {
+    flex-grow: 1;
+    width: 100%;
+    background: transparent;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: #205c83;
+    text-align: right;
+    outline: none;
+}
+
+/* Sección de Observaciones y Totales */
+.footer-table-area { grid-template-columns: 2.3fr 1fr; align-items: start; }
+.observaciones-box { border: 1px solid #205c83; height: 90px; position: relative; padding: 8px; display: flex; flex-direction: column; }
+.observaciones-label { font-size: 11px; margin-bottom: 4px; }
+
+.textarea-observaciones {
+    width: 100%;
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    resize: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+    color: #000;
+}
+
+.total-box { border: 1px solid #205c83; height: 40px; align-items: stretch; width: 100%; }
+.total-label { justify-content: center; width: 40%; border-right: 1px solid #205c83; font-size: 13px; letter-spacing: 1px; align-items: center; }
+.total-value { width: 60%; padding-left: 10px; font-size: 14px; align-items: center; justify-content: space-between; padding-right: 10px; }
+
+.input-total {
+    width: 80%;
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #205c83;
+    outline: none;
+    text-align: right;
+}
+
+/* Sección de Firmas */
+.signatures-section { justify-content: space-between; margin-top: 45px; padding: 0 20px; }
+.signature-block { width: 250px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+
+.input-firma {
+    width: 90%;
+    background: transparent;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-style: italic;
+    font-size: 13px;
+    color: #333;
+    padding-bottom: 2px;
+}
+
+.linea-decorativa-firma {
+    width: 100%;
+    border-top: 1px solid #205c83;
+    margin-bottom: 5px;
+}
+
+.texto-firma {
+    font-size: 10px;
+    letter-spacing: 1px;
+}
